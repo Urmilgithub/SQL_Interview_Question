@@ -6,6 +6,14 @@ WHERE Salary > 30000;
 
 
 //Find employees with salary between 20,000 and 35,000
-SELECT * 
+SELECT *
 FROM Employee
 WHERE Salary BETWEEN 20000 AND 35000;
+
+
+// Nth Highest Salary (Window Function)
+SELECT* FROM;
+(
+    SELECT EMPLOYEE_Id, NAME, SALARY, DENSE_RANK() OVER (ORDER BY SALARY) AS SalaryRank
+    )t
+    WHERE SalaryRank = 3;
