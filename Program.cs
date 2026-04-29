@@ -24,7 +24,9 @@ SELECT * FROM
 // Departmentwise Salary (Window Function)
 SELECT * FROM
     (
-    SELECT EMPLOYEE_Id, Name, Salary, Dept_Id,
-    ROW_NUMBER() OVER (PARTITION BY ORDER BY SALARY DESC) AS DEPT_Sal
+    SELECT Employee_Id, Name, Salary, Dept_Id,
+    ROW_NUMBER() OVER (PARTITION BY Dept_Id ORDER BY SALARY DESC) AS Dept_Sal_Rank
     )t
-    WHERE DEPT_Sal = 3; 
+    WHERE Dept_Sal_Rank = 3; 
+
+
