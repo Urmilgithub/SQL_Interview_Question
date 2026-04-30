@@ -56,3 +56,10 @@ WHERE Dept_Sal_Rank = 3;
 	FROM Employee
 	GROUP BY DeptId;
 
+
+// Find department-wise total salary
+
+	SELECT DeptId, SUM(Salary) AS TotalSalary
+	FROM Employee
+	GROUP BY DeptId;
+
