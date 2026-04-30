@@ -27,6 +27,17 @@ SELECT * FROM
     SELECT Employee_Id, Name, Salary, Dept_Id,
     ROW_NUMBER() OVER (PARTITION BY Dept_Id ORDER BY SALARY DESC) AS Dept_Sal_Rank
     )t
-    WHERE Dept_Sal_Rank = 3; 
+WHERE Dept_Sal_Rank = 3;
+
+
+// Delete Duplicate records(with ID)
+
+    DELETE FROM Employees
+	WHERE EmployeeId NOT IN 
+	(
+		SELECT FirstName, MIN(EmployeeId) As DuplicateData
+		FROM Employees
+		GROUP BY FirstName
+	)
 
 
