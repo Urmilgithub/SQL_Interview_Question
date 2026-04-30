@@ -40,4 +40,12 @@ WHERE Dept_Sal_Rank = 3;
 		GROUP BY FirstName
 	)
 
+// Delete Duplicate records (without Id)
+	WITH CTE AS 
+	(
+		SELECT FirstName, ROW_NUMBER() OVER (PARTITION BY FirstName ORDER BY FirstName) AS ROW_NUM
+		FROM Employees
+	)
+		DELETE FROM CTE WHERE ROW_NUM > 1
+
 
