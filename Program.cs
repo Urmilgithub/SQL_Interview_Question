@@ -49,3 +49,10 @@ WHERE Dept_Sal_Rank = 3;
 		DELETE FROM CTE WHERE ROW_NUM > 1
 
 
+
+// Find department-wise average salary
+
+	SELECT DeptId, AVG(Salary) AS AvgSalary
+	FROM Employee
+	GROUP BY DeptId;
+
