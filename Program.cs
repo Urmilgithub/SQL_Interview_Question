@@ -71,4 +71,12 @@ WHERE Dept_Sal_Rank = 3;
 	ORDER BY Salary DESC;
 
 
+// Find employees with same salary
+
+	SELECT Salary, COUNT(*) AS Total
+	FROM Employee
+	GROUP BY Salary
+	HAVING COUNT(*) > 1;
+
+
 
