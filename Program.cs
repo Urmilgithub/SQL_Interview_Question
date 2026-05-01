@@ -79,4 +79,9 @@ WHERE Dept_Sal_Rank = 3;
 	HAVING COUNT(*) > 1;
 
 
+// Find cumulative salary by department
+
+	SELECT *,
+	       SUM(Salary) OVER (PARTITION BY DeptId ORDER BY HireDate) AS CumulativeSalary
+	FROM Employee;
 
