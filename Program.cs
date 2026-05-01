@@ -63,3 +63,12 @@ WHERE Dept_Sal_Rank = 3;
 	FROM Employee
 	GROUP BY DeptId;
 
+
+// Find top 3 highest paid employees
+
+	SELECT TOP 3 *
+	FROM Employee
+	ORDER BY Salary DESC;
+
+
+
