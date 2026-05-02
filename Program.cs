@@ -118,4 +118,12 @@ Self Joins
 	GROUP BY m.name;
 
 
+// Find Employees Reporting to Same Manager
+
+	SELECT e1.name, e2.name, e1.manager_id
+	FROM employees e1
+	JOIN employees e2
+	ON e1.manager_id = e2.manager_id
+	AND e1.emp_id <> e2.emp_id;
+
 
