@@ -85,3 +85,13 @@ WHERE Dept_Sal_Rank = 3;
 	       SUM(Salary) OVER (PARTITION BY DeptId ORDER BY HireDate) AS CumulativeSalary
 	FROM Employee;
 
+
+// Find Employees with their Manager
+
+	SELECT
+	    e.name AS employee,
+	    m.name AS manager
+	FROM employees e
+	LEFT JOIN employees m
+	ON e.manager_id = m.emp_id;
+
