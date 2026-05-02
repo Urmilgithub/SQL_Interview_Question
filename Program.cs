@@ -109,4 +109,13 @@ Self Joins
 	ON e.manager_id = m.emp_id;
 
 
+// Count Employees Under Each Manager
+
+	SELECT m.name AS manager, COUNT(e.emp_id) AS team_size
+	FROM employees e
+	JOIN employees m
+	ON e.manager_id = m.emp_id
+	GROUP BY m.name;
+
+
 
