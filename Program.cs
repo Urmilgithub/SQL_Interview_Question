@@ -127,3 +127,10 @@ Self Joins
 	AND e1.emp_id <> e2.emp_id;
 
 
+// Find Top-Level Managers (No Manager)
+
+	SELECT name
+	FROM employees
+	WHERE manager_id IS NULL;
+
+
