@@ -1,6 +1,7 @@
 ﻿//Find employees with salary greater than 30,000
 
 using System.Collections.Concurrent;
+using System.Xml.Linq;
 
 SELECT * 
 FROM Employee
@@ -86,6 +87,10 @@ WHERE Dept_Sal_Rank = 3;
 	FROM Employee;
 
 
+-----------------------------------------------------------------------------------------
+Self Joins
+-----------------------------------------------------------------------------------------
+
 // Find Employees with their Manager
 
 	SELECT
@@ -94,4 +99,14 @@ WHERE Dept_Sal_Rank = 3;
 	FROM employees e
 	LEFT JOIN employees m
 	ON e.manager_id = m.emp_id;
+
+
+// Show Only Employees Who Have Managers
+
+	SELECT e.name, m.name
+	FROM employees e
+	JOIN employees m
+	ON e.manager_id = m.emp_id;
+
+
 
