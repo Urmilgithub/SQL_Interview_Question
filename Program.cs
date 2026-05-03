@@ -42,6 +42,7 @@ WHERE Dept_Sal_Rank = 3;
 	)
 
 // Delete Duplicate records (without Id)
+
 	WITH CTE AS 
 	(
 		SELECT FirstName, ROW_NUMBER() OVER (PARTITION BY FirstName ORDER BY FirstName) AS ROW_NUM
@@ -133,4 +134,9 @@ Self Joins
 	FROM employees
 	WHERE manager_id IS NULL;
 
+----------------------------------------------------------------------------------------------------
 
+// Employees with Salary > Average 
+    SELECT *
+	FROM employees
+	WHERE salary > (SELECT AVG(salary) FROM employees);
