@@ -140,3 +140,10 @@ Self Joins
     SELECT *
 	FROM employees
 	WHERE salary > (SELECT AVG(salary) FROM employees);
+
+
+// Update Salary (Increase by 10%)
+	UPDATE employees
+	SET salary = salary * 1.10;
+
+// 
