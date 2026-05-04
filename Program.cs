@@ -155,3 +155,9 @@ Self Joins
 	FROM employees
 	GROUP BY salary
 	HAVING COUNT(*) > 1;
+
+// Find Employees Joined in Last 30 Days
+
+	SELECT*
+	FROM Employee
+	WHERE HireDate >= DATEADD(DAY, -30, GETDATE());
