@@ -161,3 +161,11 @@ Self Joins
 	SELECT*
 	FROM Employee
 	WHERE HireDate >= DATEADD(DAY, -30, GETDATE());
+
+
+// Find Departments with No Employees
+
+	SELECT d.*
+	FROM Department d
+	LEFT JOIN Employee e ON d.DeptId = e.DeptId
+	WHERE e.DeptId IS NULL;
