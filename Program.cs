@@ -1,6 +1,5 @@
 ﻿//Find employees with salary greater than 30,000
 
-using System.Collections.Concurrent;
 using System.Xml.Linq;
 
 SELECT * 
@@ -169,3 +168,11 @@ Self Joins
 	FROM Department d
 	LEFT JOIN Employee e ON d.DeptId = e.DeptId
 	WHERE e.DeptId IS NULL;
+
+
+// Employees Who Earn More Than Their Manager
+
+	SELECT e.Name AS Employee, e.Salary, m.Name AS Manager, m.Salary AS ManagerSalary
+	FROM Employee e
+	JOIN Employee m ON e.Manager_Id = m.Employee_Id
+	WHERE e.Salary > m.Salary;
