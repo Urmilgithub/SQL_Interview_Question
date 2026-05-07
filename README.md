@@ -50,3 +50,9 @@
 - Increase Employee Salary by 10%
 
 ---
+
+## Department Queries
+
+- Find Departments with No Employees
+
+---
