@@ -26,3 +26,10 @@
 - Find Department-wise Total Salary
 
 ---
+
+## Duplicate Record Handling
+
+- Delete Duplicate Records Using ID
+- Delete Duplicate Records Without ID Using CTE
+
+---
