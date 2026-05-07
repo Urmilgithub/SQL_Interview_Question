@@ -12,3 +12,10 @@
 
 ---
 
+## Window Function Queries
+
+- Find Nth Highest Salary using `DENSE_RANK()`
+- Find Department-wise Nth Highest Salary using `ROW_NUMBER()`
+- Find Cumulative Salary by Department
+
+---
