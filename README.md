@@ -33,3 +33,14 @@
 - Delete Duplicate Records Without ID Using CTE
 
 ---
+
+## Self Join Queries
+
+- Find Employees with Their Managers
+- Show Only Employees Who Have Managers
+- Count Employees Under Each Manager
+- Find Employees Reporting to the Same Manager
+- Find Top-Level Managers (No Manager)
+- Find Employees Who Earn More Than Their Managers
+
+---
