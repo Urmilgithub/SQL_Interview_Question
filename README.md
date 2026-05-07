@@ -44,3 +44,9 @@
 - Find Employees Who Earn More Than Their Managers
 
 ---
+
+## Update Queries
+
+- Increase Employee Salary by 10%
+
+---
