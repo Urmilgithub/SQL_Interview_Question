@@ -53,6 +53,6 @@
 
 ## Department Queries
 
-- Find Departments with No Employees
+- Find Departments with No Employees.
 
 ---
