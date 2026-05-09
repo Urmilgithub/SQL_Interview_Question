@@ -176,3 +176,12 @@ Self Joins
 	FROM Employee e
 	JOIN Employee m ON e.Manager_Id = m.Employee_Id
 	WHERE e.Salary > m.Salary;
+
+
+// Employees with their Department Names
+
+	SELECT e.Employee_Id,e.Name, e.Salary, d.DeptName
+	FROM Employee e
+	INNER JOIN Department d
+	ON e.DeptId = d.DeptId;
+
