@@ -208,3 +208,12 @@ SELECT e1.name, e2.name, e1.manager_id
 	INNER JOIN Department d
 	ON e.DeptId = d.DeptId;
 
+
+// Total Employees in Each Department
+
+	SELECT d.DeptName, COUNT(e.Employee_Id) AS TotalEmployees
+	FROM Department d
+	LEFT JOIN Employee e
+	ON d.DeptId = e.DeptId
+	GROUP BY d.DeptName;
+
