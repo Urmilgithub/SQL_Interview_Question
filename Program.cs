@@ -101,9 +101,20 @@ Self Joins
 	ON e.manager_id = m.emp_id;
 
 
+// All Employees with Department Names (including employees without department)
+
+	SELECT e.Employee_Id,
+	       e.Name,
+	       d.DeptName
+	FROM Employee e
+	LEFT JOIN Department d
+	ON e.DeptId = d.DeptId;
+
+
+
 // Show Only Employees Who Have Managers
 
-	SELECT e.name, m.name
+SELECT e.name, m.name
 	FROM employees e
 	JOIN employees m
 	ON e.manager_id = m.emp_id;
