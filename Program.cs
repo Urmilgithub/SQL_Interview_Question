@@ -129,9 +129,21 @@ SELECT e.name, m.name
 	GROUP BY m.name;
 
 
+// Employees working in same department
+
+	SELECT e1.Name AS Employee1,
+	       e2.Name AS Employee2,
+	       e1.DeptId
+	FROM Employee e1
+	JOIN Employee e2
+	ON e1.DeptId = e2.DeptId
+	AND e1.Employee_Id <> e2.Employee_Id;
+
+
+
 // Find Employees Reporting to Same Manager
 
-	SELECT e1.name, e2.name, e1.manager_id
+SELECT e1.name, e2.name, e1.manager_id
 	FROM employees e1
 	JOIN employees e2
 	ON e1.manager_id = e2.manager_id
