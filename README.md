@@ -22,7 +22,7 @@
 
 ## Aggregate Function Queries
 
-- Find Department-wise Average Salary
+- Find Department-wise Average Salary.
 - Find Department-wise Total Salary
 
 ---
